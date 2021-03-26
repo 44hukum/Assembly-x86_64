@@ -1,3 +1,22 @@
 # This is a assembly language practice based on x86_54 just to understand the assembly language, registers , real long and protected mode of a computer architecture.
-Basically this repository include some of the program I wrote in assembly language. Syntax,pointers,file handling, linker, are some of the concept covered with repository. long mode of operating system which include 64 bit registers are also explored to understand the underlying architecture. Finally a link between c and asm code is presented. yasm is used for compilation, dwarf2 for enabling debugging and gdb for debugging.
-
+Required: x86_64 x86_64 x86_64 GNU/Linux
+Assembler: nasm
+# ubuntu 20.04: Installation command 
+  ```
+   sudo apt install nasm 
+  ```
+ #compile:
+  ```
+   
+   nasm -f elf64 -o output.o user_interaction.asm
+   
+  ```
+  After compilation nasm assembler generats the object file which need to be prepared for executable 
+  so we use linker
+  ```
+   ld output.o -o output
+  ```
+  finally 
+  ```
+   ./output
+  ```
